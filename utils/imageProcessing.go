@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func ProcessImage(url string) (int, error) {
+func ProcessImage(url string) (int, error) {   // return perimeter of image
 	resp, err := http.Get(url)
 	if err != nil {
 		return 0, err

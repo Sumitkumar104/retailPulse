@@ -4,7 +4,7 @@ import (
 	"github.com/gorilla/mux"
 	"retailPulse/handlers"
 )
-
+ 
 func InitializeRoutes() *mux.Router {
 	router := mux.NewRouter()
 

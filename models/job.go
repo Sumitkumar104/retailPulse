@@ -23,4 +23,4 @@ type ImageResult struct {
 	Perimeter int
 }
 
-var Jobs = sync.Map{} // Thread-safe map to store jobs
+var Jobs = sync.Map{} // Thread-safe map to store jobs or avoid Race condition

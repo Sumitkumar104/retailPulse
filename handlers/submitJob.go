@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"retailPulse/models"
-	"github.com/yourusername/retailPulse/utils"
+	"retailPulse/utils"
 	"sync"
 	"time"
 )
@@ -23,6 +23,7 @@ type Visit struct {
 func SubmitJob(w http.ResponseWriter, r *http.Request) {
 	var req SubmitRequest
 	err := json.NewDecoder(r.Body).Decode(&req)
+
 	if err != nil || req.Count != len(req.Visits) {
 		http.Error(w, `{"error":"Invalid request"}`, http.StatusBadRequest)
 		return
@@ -57,7 +58,7 @@ func processJob(job *models.Job, visits []Visit) {
 			store, exists := models.StoreMaster[visit.StoreID]
 			if !exists {
 				job.StoreErrors = append(job.StoreErrors, models.StoreError{
-					StoreID: visit.store_id,
+					StoreID: visit.StoreID,
 					Error:   "Store ID not found",
 				})
 				return
