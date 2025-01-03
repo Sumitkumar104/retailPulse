@@ -57,7 +57,7 @@ func processJob(job *models.Job, visits []Visit) {
 			store, exists := models.StoreMaster[visit.StoreID]
 			if !exists {
 				job.StoreErrors = append(job.StoreErrors, models.StoreError{
-					StoreID: visit.StoreID,
+					StoreID: visit.store_id,
 					Error:   "Store ID not found",
 				})
 				return
