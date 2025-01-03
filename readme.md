@@ -57,7 +57,7 @@ This project should be compatible across multiple platforms as long as Go and th
 
 - Error Handling: Improve error handling with more detailed and specific error responses (e.g., different error codes for different types of failures such as store not found, image processing error, etc.).
 
--Image Storage: Integrate cloud storage (e.g., Amazon S3, Google Cloud Storage) for storing images, which will allow handling large volumes of images more efficiently and facilitate easier image retrieval.
+- Image Storage: Integrate cloud storage (e.g., Amazon S3, Google Cloud Storage) for storing images, which will allow handling large volumes of images more efficiently and facilitate easier image retrieval.
 
 - API Documentation: Use API documentation tools like Swagger to automatically generate and maintain up-to-date API documentation, making it easier for users to interact with the API.
 
